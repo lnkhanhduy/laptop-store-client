@@ -1,0 +1,43 @@
+.form-auth {
+  font-size: 1.8rem;
+
+  h2 {
+    font-size: 3.2rem;
+    margin-top: 0.5rem;
+    text-align: center;
+  }
+
+  .form {
+    margin-top: 0.5rem;
+
+    .form-group {
+      margin: 0.8rem 0;
+
+      input {
+        width: 100%;
+        display: block;
+        margin-top: 0.3rem;
+        padding: 1rem;
+        outline: none;
+        border: 0.1rem solid #ccc;
+        border-radius: 0.3rem;
+        font-size: 1.7rem;
+      }
+    }
+  }
+
+  button {
+    margin-top: 0.5rem;
+    padding: 1.1rem 3rem;
+    background: #0e3b3e;
+    color: white;
+    border-radius: 0.3rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}

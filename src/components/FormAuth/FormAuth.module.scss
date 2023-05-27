@@ -1,0 +1,18 @@
+.form-group {
+  margin: 0.8rem 0;
+
+  input {
+    width: 100%;
+    display: block;
+    margin-top: 0.3rem;
+    padding: 1rem;
+    outline: none;
+    border: 0.1rem solid #ccc;
+    border-radius: 0.3rem;
+    font-size: 1.7rem;
+  }
+}
+
+.error {
+  color: red;
+}

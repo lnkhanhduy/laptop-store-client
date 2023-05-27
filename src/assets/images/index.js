@@ -1,0 +1,27 @@
+const images = {
+  logo: require('./logo.png'),
+  no_image: require('./no-image.png'),
+  user: require('./user.png'),
+  cart: require('./cart.png'),
+  macbook: require('./macbook.png'),
+  hp: require('./hp.png'),
+  asus: require('./asus.png'),
+  lenovo: require('./lenovo.png'),
+  acer: require('./acer.png'),
+  dell: require('./dell.png'),
+  msi: require('./msi.png'),
+  hot: require('./hot.png'),
+  earphone: require('./earphone.png'),
+  speaker: require('./speaker.png'),
+  mouse: require('./mouse.png'),
+  keyboard: require('./keyboard.png'),
+  laptop: require('./laptop.png'),
+  accessory: require('./accessory.png'),
+  accessory_pc: require('./accessory-pc.png'),
+  screen: require('./screen.png'),
+  policy_1: require('./policy-1.png'),
+  policy_2: require('./policy-2.png'),
+  policy_3: require('./policy-3.png'),
+};
+
+export default images;

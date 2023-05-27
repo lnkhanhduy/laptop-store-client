@@ -1,0 +1,86 @@
+.container {
+  background: #f8f8fc;
+  padding-bottom: 2rem;
+}
+
+.content {
+  margin: 2.4rem auto 0;
+  width: 65%;
+  background: white;
+  font-size: 1.8rem;
+  padding: 3rem;
+  border-radius: 0.5rem;
+
+  .warranty-check {
+    width: 100%;
+
+    input {
+      display: block;
+      width: 100%;
+      padding: 1rem;
+      outline: none;
+      border: 0.1rem solid #ccc;
+      border-radius: 0.3rem;
+      font-size: 1.7rem;
+      margin: 0.8rem 0 1.6rem;
+    }
+
+    button {
+      color: white;
+      background: #03484d;
+      font-size: 1.6rem;
+      padding: 1rem 1.4rem;
+      border-radius: 0.3rem;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  .result {
+    margin-top: 2rem;
+    max-height: 36rem;
+    overflow: auto;
+    line-height: 1.5;
+    padding: 0 0.3rem;
+
+    .product-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.2rem 0;
+
+      .name {
+        width: 50%;
+        overflow: auto;
+        height: 5.6rem;
+      }
+
+      .date {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+    }
+  }
+
+  .error {
+    display: inline-block;
+    margin-top: 1rem;
+    color: red;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .content {
+    width: 72%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .content {
+    margin-top: 8rem;
+  }
+}

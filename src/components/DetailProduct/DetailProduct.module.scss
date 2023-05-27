@@ -1,0 +1,52 @@
+.container {
+  height: 100%;
+  padding: 3rem 10rem;
+  background: #f8f8fc;
+  display: flex;
+  justify-content: space-between;
+}
+
+.product {
+  width: 66.7%;
+  background: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.info {
+  width: 33.3%;
+  margin-left: 3rem;
+  background: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1280px) {
+  .container {
+    padding: 3rem;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .container {
+    padding: 2rem;
+  }
+  .product {
+    width: 60%;
+  }
+  .info {
+    width: 40%;
+    margin-left: 1rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .container {
+    padding: 2rem 1rem;
+    margin-top: 4.6rem;
+  }
+
+  .info {
+    margin-left: 0.4rem;
+  }
+}

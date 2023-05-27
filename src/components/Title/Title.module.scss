@@ -1,0 +1,75 @@
+.title {
+  background: #03484d;
+  position: relative;
+  padding: 0.8rem 1.7rem;
+  margin: 3rem 0 2rem;
+  overflow: hidden;
+
+  .text {
+    text-transform: uppercase;
+    color: white;
+    font-size: 4.2rem;
+    font-weight: bold;
+    padding: 0.2rem 3rem;
+    border: 0.2rem solid #cccccc88;
+  }
+
+  .top-left {
+    position: absolute;
+    top: -1rem;
+    left: -1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background: white;
+    z-index: 1;
+  }
+
+  .bottom-left {
+    position: absolute;
+    bottom: -1rem;
+    left: -1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background: white;
+    z-index: 1;
+  }
+
+  .top-right {
+    position: absolute;
+    top: -1rem;
+    right: -1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background: white;
+    z-index: 1;
+  }
+
+  .bottom-right {
+    position: absolute;
+    bottom: -1rem;
+    right: -1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background: white;
+    z-index: 1;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .title {
+    margin: 0 0 1rem 0;
+    .text {
+      font-size: 3.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .title .text {
+    font-size: 2.8rem;
+  }
+}

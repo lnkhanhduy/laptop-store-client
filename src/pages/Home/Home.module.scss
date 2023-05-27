@@ -1,0 +1,12 @@
+.home {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: auto;
+}
+
+@media screen and (max-width: 640px) {
+  .list-product {
+    margin-top: 4rem;
+  }
+}

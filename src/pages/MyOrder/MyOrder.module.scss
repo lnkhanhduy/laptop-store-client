@@ -1,0 +1,35 @@
+.content {
+  width: 85%;
+  margin: 1rem auto;
+  background: #f8f8fc;
+  padding: 1rem 2rem;
+  border-radius: 0.3rem;
+
+  table {
+    width: 100%;
+    line-height: 1.6;
+
+    .name-product {
+      width: 50%;
+      overflow: auto;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+
+      &:hover {
+        color: #0e3b3e;
+      }
+    }
+
+    .item-table {
+      width: 10%;
+      text-align: center;
+      margin: auto;
+    }
+  }
+  .item {
+    width: 100%;
+  }
+}

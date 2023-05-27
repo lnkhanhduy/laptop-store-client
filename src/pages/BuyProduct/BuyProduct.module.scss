@@ -1,0 +1,15 @@
+.content {
+  display: flex;
+  padding: 1rem 2rem;
+}
+.cart-item {
+  position: absolute;
+  top: 50%;
+  right: 6rem;
+  transform: translateY(-50%);
+  width: 50%;
+}
+
+.fill-info {
+  width: 40%;
+}

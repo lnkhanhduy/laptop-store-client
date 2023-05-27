@@ -1,0 +1,35 @@
+.contact {
+  .content {
+    padding: 3rem;
+    background: #f8f8fc;
+    width: 40rem;
+    margin: 5rem auto 0;
+    border-radius: 0.5rem;
+    font-size: 2rem;
+
+    .contact-item {
+      margin: 2rem 0;
+      display: flex;
+      align-items: center;
+
+      .icon {
+        margin-right: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    a {
+      color: black;
+      text-decoration: none;
+
+      display: block;
+    }
+  }
+}
+@media screen and (max-width: 640px) {
+  .contact .content {
+    margin-top: 7rem;
+  }
+}

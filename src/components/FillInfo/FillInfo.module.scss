@@ -1,0 +1,50 @@
+.fill-info {
+  padding-top: 2rem;
+  margin: auto;
+  width: 80%;
+
+  .button {
+    display: flex;
+    justify-content: center;
+
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 1.6rem;
+      background: #03484d;
+      color: white;
+      padding: 1.2rem 2.4rem;
+      width: 40%;
+      border-radius: 0.5rem;
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      font-weight: bold;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+
+  .form-group {
+    margin: 0.8rem 0;
+
+    input,
+    .select {
+      width: 100%;
+      display: block;
+      margin-top: 0.3rem;
+      padding: 1rem;
+      outline: none;
+      border: 0.1rem solid #ccc;
+      border-radius: 0.3rem;
+      font-size: 1.7rem;
+    }
+  }
+
+  .error {
+    color: red;
+  }
+}

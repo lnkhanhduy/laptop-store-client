@@ -1,0 +1,69 @@
+@import 'normalize.css';
+
+:root {
+  --height-header-item: 4rem;
+  --height-header-item-640: 3.4rem;
+  --height-user-icon: 2.4rem;
+  --padding-header-item: 4rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+::-webkit-scrollbar {
+  width: 0.3vw;
+}
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+.no-select {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.swiper-button-prev {
+  color: transparent;
+  transition: 0.4s;
+}
+
+.swiper-button-next {
+  color: transparent;
+  transition: 0.4s;
+}
+
+.swiper:hover .swiper-button-prev {
+  color: #03484d;
+}
+
+.swiper:hover .swiper-button-next {
+  color: #03484d;
+}
+
+input[type='number'] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}

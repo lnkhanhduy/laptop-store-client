@@ -1,0 +1,65 @@
+.content {
+  display: flex;
+  padding: 5rem 10rem;
+  background: #f8f8fc;
+  min-height: 65rem;
+
+  .list-product {
+    width: 100%;
+    border-radius: 0.3rem;
+    overflow: hidden;
+
+    .filter-product {
+      margin-left: 5%;
+      width: 90%;
+      background: white;
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+      padding: 1.5rem 2rem;
+      border-radius: 0.3rem;
+      overflow: hidden;
+
+      span {
+        margin-right: 1.5rem;
+        font-weight: bold;
+      }
+
+      button {
+        background: white;
+        outline: none;
+        border: 0.1rem solid #ccc;
+        padding: 0.8rem 1.2rem;
+        border-radius: 0.3rem;
+        margin: 0 0.8rem;
+        cursor: pointer;
+
+        &:hover {
+          background: rgba(204, 204, 204, 0.4);
+          opacity: 0.8;
+        }
+      }
+
+      .active {
+        background: rgba(204, 204, 204, 0.4);
+      }
+    }
+  }
+}
+@media screen and (max-width: 1280px) {
+  .content {
+    padding: 5rem;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .content {
+    padding: 5rem 1rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .content {
+    margin-top: 1.6rem;
+  }
+}
