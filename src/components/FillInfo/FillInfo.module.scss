@@ -2,6 +2,7 @@
   padding-top: 2rem;
   margin: auto;
   width: 80%;
+  font-size: 1.7rem;
 
   .button {
     display: flex;
@@ -15,9 +16,8 @@
       background: #03484d;
       color: white;
       padding: 1.2rem 2.4rem;
-      width: 40%;
+      width: 18rem;
       border-radius: 0.5rem;
-      font-size: 1.6rem;
       text-transform: uppercase;
       font-weight: bold;
       cursor: pointer;
@@ -40,11 +40,22 @@
       outline: none;
       border: 0.1rem solid #ccc;
       border-radius: 0.3rem;
-      font-size: 1.7rem;
+      font-size: 1.5rem;
     }
   }
 
   .error {
     color: red;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .fill-info {
+    font-size: 1.5rem;
+
+    .form-group input,
+    .form-group .select {
+      font-size: 1.3rem;
+    }
   }
 }

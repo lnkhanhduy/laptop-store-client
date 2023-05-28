@@ -76,11 +76,13 @@
 @media screen and (max-width: 960px) {
   .content {
     width: 72%;
+    font-size: 1.7rem;
   }
 }
 
 @media screen and (max-width: 640px) {
   .content {
-    margin-top: 8rem;
+    margin-top: 7rem;
+    font-size: 1.5rem;
   }
 }

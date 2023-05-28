@@ -1,6 +1,4 @@
 .form-auth {
-  font-size: 1.8rem;
-
   h2 {
     font-size: 3.2rem;
     margin-top: 0.5rem;
@@ -39,5 +37,17 @@
     &:hover {
       opacity: 0.9;
     }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  h2 {
+    font-size: 2.8rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  h2 {
+    font-size: 2.2rem;
   }
 }

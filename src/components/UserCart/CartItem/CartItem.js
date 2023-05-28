@@ -66,7 +66,7 @@ function CartItem({ data, checkBox = true, trash = true, quantityReadOnly = true
         )}
 
         <div>
-          <Link className={cx('product-item')}>
+          <Link to={`/product/${data?._id}`} className={cx('product-item')}>
             <img src={data?.images && data.images[0]?.path} alt={data?.type} />
             <span>{data?.name_product || data?.name}</span>
           </Link>

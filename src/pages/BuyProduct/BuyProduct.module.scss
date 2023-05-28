@@ -13,3 +13,16 @@
 .fill-info {
   width: 40%;
 }
+
+@media screen and (max-width: 960px) {
+  .content {
+    font-size: 1.7rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .content {
+    margin-top: 6.5rem;
+    font-size: 1.5rem;
+  }
+}

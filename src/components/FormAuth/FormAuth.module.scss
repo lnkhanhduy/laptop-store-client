@@ -16,3 +16,17 @@
 .error {
   color: red;
 }
+
+@media screen and (max-width: 960px) {
+  .form-group input {
+    padding: 0.9rem;
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .form-group input {
+    padding: 0.7rem;
+    font-size: 1.4rem;
+  }
+}

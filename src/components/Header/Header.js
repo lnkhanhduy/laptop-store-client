@@ -5,14 +5,7 @@ import Swal from 'sweetalert2';
 
 import { Link } from 'react-router-dom';
 
-import {
-  faBars,
-  faHouse,
-  faLaptop,
-  faMagnifyingGlass,
-  faPhone,
-  faScrewdriver,
-} from '@fortawesome/free-solid-svg-icons';
+import { faHouse, faLaptop, faMagnifyingGlass, faPhone, faScrewdriver } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import images from '../../assets/images';
@@ -45,13 +38,6 @@ function Header({ onClickListProduct }) {
   return (
     <div className={cx('container')}>
       <div className={cx('header')}>
-        <div className={cx('menu', 'active')}>
-          <span>
-            <FontAwesomeIcon icon={faBars} />
-          </span>
-          <div className={cx('list-menu', 'active')}></div>
-        </div>
-
         <Link to={'/'} className={cx('logo', 'no-select')}>
           <img src={images.logo} alt="logo" />
           <span className={cx('logo-text')}>Laptop Store</span>
@@ -78,6 +64,9 @@ function Header({ onClickListProduct }) {
           <div className={cx('user-icon')}>
             {name ? (
               <div className={cx('user-login')}>
+                <div className={cx('user-img')}>
+                  <img src={images.user} alt="" />
+                </div>
                 <span className={cx('user-text')}>
                   Xin chào, &nbsp;<strong>{name.split(' ')[name.split(' ').length - 1]}</strong>
                 </span>
@@ -88,7 +77,9 @@ function Header({ onClickListProduct }) {
               </div>
             ) : (
               <Link to={'/login'} className={cx('user-no-login')}>
-                <img src={images.user} alt="" />
+                <div className={cx('user-img')}>
+                  <img src={images.user} alt="" />
+                </div>
                 <div className={cx('user-text')}>
                   <div>Đăng nhập</div>
                   <span className={cx('separate')}>/&nbsp;</span>
@@ -100,7 +91,9 @@ function Header({ onClickListProduct }) {
 
           <Link to={'/cart'} className={cx('user-icon')} onClick={handleOnClickCart}>
             <span className={cx('cart-number')}></span>
-            <img src={images.cart} alt="" />
+            <div className={cx('user-img')}>
+              <img src={images.cart} alt="" />
+            </div>
             <span className={cx('user-text')}>Giỏ hàng</span>
           </Link>
         </div>

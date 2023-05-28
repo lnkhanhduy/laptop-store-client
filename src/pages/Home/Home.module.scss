@@ -5,7 +5,17 @@
   margin: auto;
 }
 
+@media screen and (max-width: 960px) {
+  .home {
+    font-size: 1.7rem;
+  }
+}
+
 @media screen and (max-width: 640px) {
+  .home {
+    font-size: 1.5rem;
+  }
+
   .list-product {
     margin-top: 4rem;
   }

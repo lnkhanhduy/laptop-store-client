@@ -1,7 +1,9 @@
 @import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 :root {
   --height-header-item: 4rem;
+  --height-header-item-960: 3.6rem;
   --height-header-item-640: 3.4rem;
   --height-user-icon: 2.4rem;
   --padding-header-item: 4rem;
@@ -15,6 +17,7 @@
 
 html {
   font-size: 62.5%;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {

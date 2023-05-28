@@ -28,8 +28,20 @@
     }
   }
 }
+
+@media screen and (max-width: 960px) {
+  .contact .content {
+    width: 35rem;
+    padding: 2rem;
+    font-size: 1.7rem;
+  }
+}
+
 @media screen and (max-width: 640px) {
   .contact .content {
+    width: 30rem;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
     margin-top: 7rem;
   }
 }
