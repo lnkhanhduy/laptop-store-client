@@ -1,11 +1,13 @@
 export function GetAPI(path, token) {
   const options = {
     method: 'GET',
-    url: 'https://laptop-store-server-nodejs-7cwsq5ayj-lnkhanhduy.vercel.app/' + path,
+    url: 'http://localhost:5000/' + path,
     headers: {
-      Authorization: token,
+      'Content-Type': 'application/json',
+      Authorization: 'Bearer ' + token,
     },
   };
 
   return options;
 }
+// https://laptop-store-server-nodejs-7cwsq5ayj-lnkhanhduy.vercel.app/

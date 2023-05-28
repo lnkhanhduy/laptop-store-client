@@ -16,16 +16,22 @@ const cx = classNames.bind(styles);
 function Header({ onClickListProduct }) {
   const name = window.sessionStorage.getItem('name');
   const [searchValue, setSearchValue] = useState('');
+  const userId = window.sessionStorage.getItem('userId');
+  const token = window.sessionStorage.getItem('token');
 
   const handleOnClickCart = (e) => {
     e.preventDefault();
-    Swal.fire({
-      position: 'top',
-      icon: 'warning',
-      title: 'Tính năng đang cập nhật!',
-      showConfirmButton: false,
-      timer: 1500,
-    });
+    if (!userId || !token)
+      Swal.fire({
+        position: 'top',
+        icon: 'error',
+        title: 'Vui lòng đăng nhập để xem giỏ hàng!',
+        showConfirmButton: false,
+        timer: 1500,
+      });
+    else {
+      window.location.href = '/cart';
+    }
   };
 
   const handleFormSearchSubmit = (e) => {
@@ -89,7 +95,7 @@ function Header({ onClickListProduct }) {
             )}
           </div>
 
-          <Link to={'/cart'} className={cx('user-icon')} onClick={handleOnClickCart}>
+          <Link className={cx('user-icon')} onClick={handleOnClickCart}>
             <span className={cx('cart-number')}></span>
             <div className={cx('user-img')}>
               <img src={images.cart} alt="" />

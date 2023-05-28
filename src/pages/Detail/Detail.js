@@ -45,47 +45,51 @@ function Detail() {
   };
 
   const handleAddCart = () => {
-    const complete = false;
-    if (!complete) {
+    if (!idUser && !token) {
       Swal.fire({
         position: 'top',
         icon: 'warning',
-        title: 'Tính năng đang cập nhật!',
+        title: 'Vui lòng đăng nhập để thêm vào giỏ hàng!',
         showConfirmButton: false,
         timer: 1500,
       });
     } else {
-      if (!idUser && !token) {
-        Swal.fire({
-          position: 'top',
-          icon: 'warning',
-          title: 'Vui lòng đăng nhập để thêm vào giỏ hàng!',
-          showConfirmButton: false,
-          timer: 1500,
-        });
-      } else {
-        const body = {
-          idProduct: dataProduct._id,
-          idUser,
-          name: dataProduct.name,
-          price: dataProduct.price,
-          total: dataProduct.price,
-          image: dataProduct.image ? dataProduct.image[0].path : '',
-        };
+      const body = {
+        idProduct: dataProduct._id,
+        idUser,
+        name: dataProduct.name,
+        price: dataProduct.price,
+        total: dataProduct.price,
+        image: dataProduct.images ? dataProduct.images[0].path : '',
+      };
 
-        const postData = async (body, token) => {
-          await axios
-            .request(postService.PostAPI('cart/add', body, token))
-            .then(function (response) {
-              console.log(response);
-            })
-            .catch(function (error) {
-              console.error(error);
+      const postData = async (body, token) => {
+        await axios
+          .request(postService.PostAPI('cart/add', body, token))
+          .then(function (response) {
+            if (response.data.success) {
+              Swal.fire({
+                position: 'top',
+                icon: 'success',
+                title: 'Thêm vào giỏ hàng thành công!',
+                showConfirmButton: false,
+                timer: 1500,
+              });
+            }
+          })
+          .catch(function (error) {
+            console.error(error);
+            Swal.fire({
+              position: 'top',
+              icon: 'warning',
+              title: error.response.data.message,
+              showConfirmButton: false,
+              timer: 1500,
             });
-        };
+          });
+      };
 
-        postData(body, token);
-      }
+      postData(body, token);
     }
   };
   return (

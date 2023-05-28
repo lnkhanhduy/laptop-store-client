@@ -4,9 +4,12 @@ import styles from './CartItem.module.scss';
 
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
+import Swal from 'sweetalert2';
 
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import * as postServices from '../../../services/PostAPI';
 
 const cx = classNames.bind(styles);
 
@@ -56,6 +59,42 @@ function CartItem({ data, checkBox = true, trash = true, quantityReadOnly = true
     }
   };
 
+  const handleOnClickDeleteCart = () => {
+    const body = { id: data?._id };
+    const token = window.sessionStorage.getItem('token');
+
+    const postData = async (body) => {
+      await axios
+        .request(postServices.PostAPI('cart/delete', body, token))
+        .then(function (response) {
+          if (response.data.success) {
+            Swal.fire({
+              position: 'top',
+              icon: 'success',
+              title: 'Xóa khỏi giỏ hàng thành công!',
+              showConfirmButton: false,
+              timer: 1500,
+            });
+
+            setTimeout(() => {
+              window.location.href = '/cart';
+            }, 1500);
+          }
+        })
+        .catch(function (error) {
+          Swal.fire({
+            position: 'top',
+            icon: 'error',
+            title: error.response.data.message,
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        });
+    };
+
+    postData(body);
+  };
+
   return (
     <div className={cx('cart-item')}>
       <div className={cx('products')}>
@@ -67,7 +106,7 @@ function CartItem({ data, checkBox = true, trash = true, quantityReadOnly = true
 
         <div>
           <Link to={`/product/${data?._id}`} className={cx('product-item')}>
-            <img src={data?.images && data.images[0]?.path} alt={data?.type} />
+            <img src={(data?.images && data.images[0]?.path) || data.image} alt={data?.type} />
             <span>{data?.name_product || data?.name}</span>
           </Link>
         </div>
@@ -100,7 +139,7 @@ function CartItem({ data, checkBox = true, trash = true, quantityReadOnly = true
 
         {trash && (
           <div className={cx('info-item')}>
-            <span className={cx('remove')}>
+            <span className={cx('remove')} onClick={handleOnClickDeleteCart}>
               <FontAwesomeIcon icon={faTrashCan} />
             </span>
           </div>

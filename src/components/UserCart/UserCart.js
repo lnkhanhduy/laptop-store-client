@@ -1,33 +1,17 @@
+import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import styles from './UserCart.module.scss';
 import CartItem from './CartItem/CartItem';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
 
 const cx = classNames.bind(styles);
 
-function UserCart() {
-  const [checkAll, setCheckAll] = useState(false);
-
-  const onClickCheckBox = (e) => {
-
-
-    if (e.target.checked) {
-      e.target.checked = false;
-    } else {
-      e.target.checked = true;
-    }
-  };
-
-  const handleOnClickCheckAll = (e) => {
-    setCheckAll(!checkAll);
-  };
-
+function UserCart({ data }) {
   return (
     <div className={cx('user-cart')}>
       <div className={cx('header')}>
         <div className={cx('products')}>
-          <input type="checkbox" onClick={handleOnClickCheckAll} checked={checkAll} />
+          <input type="checkbox" />
           <span>Sản phẩm</span>
         </div>
 
@@ -40,24 +24,29 @@ function UserCart() {
       </div>
 
       <div className={cx('content')}>
-        <CartItem onClickCheckBox={onClickCheckBox} checkAll={checkAll} />
-        <CartItem onClickCheckBox={onClickCheckBox} checkAll={checkAll} />
+        {data?.map((product, index) => {
+          return <CartItem key={index} data={product} />;
+        })}
       </div>
 
       <div className={cx('buy')}>
         <div className={cx('left')}>
-          <input type="checkbox" onClick={handleOnClickCheckAll} checked={checkAll} />
+          <input type="checkbox" />
           <span>Chọn tất cả</span>
         </div>
         <div className={cx('right')}>
           <p>Tổng thanh toán&nbsp;</p>
-          <span>(1 sản phẩm):&nbsp;</span>
-          <span className={cx('price')}>10.000.000</span>
+          <span>():&nbsp;</span>
+          <span className={cx('price')}></span>
           <Link>Mua hàng</Link>
         </div>
       </div>
     </div>
   );
 }
+
+UserCart.propTypes = {
+  data: PropTypes.array,
+};
 
 export default UserCart;

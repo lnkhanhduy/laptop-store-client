@@ -6,24 +6,32 @@
     width: 80%;
     margin: 3rem auto;
     border-radius: 0.3rem;
-  }
-}
 
-.text-cart {
-  font-size: 2.8rem;
-  margin-top: 2rem;
-  text-align: center;
+    .text-cart {
+      font-size: 2.4rem;
+      margin-top: 2rem;
+      text-align: center;
+    }
+  }
 }
 
 @media screen and (max-width: 960px) {
   .cart {
     font-size: 1.6rem;
+
+    .content .text-cart {
+      font-size: 1.9rem;
+    }
   }
 }
 
 @media screen and (max-width: 640px) {
-  .cart {
-    margin-top: 6.5rem;
+  .cart .content {
+    margin-top: 8rem;
     font-size: 1.5rem;
+
+    .text-cart {
+      font-size: 1.6rem;
+    }
   }
 }
