@@ -48,10 +48,10 @@ function MyOrder() {
     <div>
       <Header />
       <div className={cx('content')}>
-        <table>
+        <table className={cx('table')}>
           <tr>
             <th className={cx('name-product')}>Sản phẩm</th>
-            <th className={cx('item-table')}>Số lượng</th>
+            <th className={cx('item-table', 'quantity')}>Số lượng</th>
             <th className={cx('item-table')}>Tổng tiền</th>
             <th className={cx('item-table')}>Ngày mua</th>
             <th className={cx('item-table')}>Bảo hành đến</th>
@@ -84,7 +84,7 @@ function MyOrder() {
                       <Link to={`/product/${product.id_product}`}>
                         <td className={cx('name-product')}>{product.name_product}</td>
                       </Link>
-                      <td className={cx('item-table')}>{product.quantity}</td>
+                      <td className={cx('item-table', 'quantity')}>{product.quantity}</td>
                       <td className={cx('item-table')}>{formatMoney(product.total)}</td>
                       <td className={cx('item-table')}>{formatDate(product.createdAt)}</td>
                       <td className={cx('item-table')}>{formatDate(product.guarantee) || ''}</td>

@@ -29,9 +29,6 @@
       margin: auto;
     }
   }
-  .item {
-    width: 100%;
-  }
 }
 
 @media screen and (max-width: 1280px) {
@@ -43,7 +40,25 @@
 
 @media screen and (max-width: 960px) {
   .content {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
+    width: 95%;
+    overflow: auto;
+
+    .table {
+      width: 100rem;
+
+      .name-product {
+        width: 40rem;
+      }
+
+      .item-table.quantity {
+        width: 10rem;
+      }
+
+      .item-table {
+        width: 20rem;
+      }
+    }
   }
 }
 

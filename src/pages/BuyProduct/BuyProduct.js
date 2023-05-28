@@ -40,11 +40,11 @@ function BuyProduct() {
     <div className={cx('buy-product')}>
       <Header />
       <div className={cx('content')}>
+        <div className={cx('cart-item')}>
+          <CartItem showPrice={false} checkBox={false} trash={false} data={dataProduct} />
+        </div>
         <div className={cx('fill-info')}>
           <FillInfo data={dataProduct} />
-        </div>
-        <div className={cx('cart-item')}>
-          <CartItem checkBox={false} trash={false} data={dataProduct} />
         </div>
       </div>
     </div>

@@ -82,30 +82,23 @@ function FillInfo({ data }) {
   return (
     <div className={cx('fill-info')}>
       <form action="" onSubmit={handleSubmitFillInfo}>
-        <div className={cx('form-group')}>
-          <label htmlFor="">Họ và tên</label>
-          <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
-        </div>
-        <div className={cx('form-group')}>
-          <label htmlFor="">Địa chỉ</label>
-          <input type="text" value={address} onChange={(e) => setAddress(e.target.value)} />
-        </div>
-        <div className={cx('form-group')}>
-          <label htmlFor="">Số điện thoại</label>
-          <input type="text" value={phone} onChange={(e) => setPhone(e.target.value)} />
-        </div>
-        <div className={cx('form-group')}>
-          <label htmlFor="">Email</label>
-          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-        </div>
-        <div className={cx('form-group')}>
-          <label htmlFor="">Phương thức thanh toán</label>
-          <select className={cx('select')} name="" id="">
-            <option value="" selected>
-              Thanh toán bằng tiền mặt
-            </option>
-            <option value="">Chưa hỗ trợ phương thức thanh toán khác</option>
-          </select>
+        <div className={cx('form-fill-info')}>
+          <div className={cx('form-group')}>
+            <label htmlFor="">Họ và tên</label>
+            <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+          </div>
+          <div className={cx('form-group')}>
+            <label htmlFor="">Địa chỉ</label>
+            <input type="text" value={address} onChange={(e) => setAddress(e.target.value)} />
+          </div>
+          <div className={cx('form-group')}>
+            <label htmlFor="">Số điện thoại</label>
+            <input type="text" value={phone} onChange={(e) => setPhone(e.target.value)} />
+          </div>
+          <div className={cx('form-group')}>
+            <label htmlFor="">Email</label>
+            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+          </div>
         </div>
 
         {error && <span className={cx('error')}>{error}</span>}

@@ -1,22 +1,32 @@
 .content {
   display: flex;
   padding: 1rem 2rem;
-}
-.cart-item {
-  position: absolute;
-  top: 50%;
-  right: 6rem;
-  transform: translateY(-50%);
-  width: 50%;
+
+  .cart-item {
+    position: absolute;
+    width: 80%;
+    top: 18rem;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 20rem;
+    overflow: auto;
+  }
+
+  .fill-info {
+    width: 80rem;
+    margin: 22rem auto 2rem;
+  }
 }
 
-.fill-info {
-  width: 40%;
+@media screen and (max-width: 1280px) {
+  .content {
+    font-size: 1.6rem;
+  }
 }
 
 @media screen and (max-width: 960px) {
   .content {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
   }
 }
 

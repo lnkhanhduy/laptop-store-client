@@ -20,7 +20,7 @@
     .product-item {
       display: flex;
       align-items: center;
-      width: 70%;
+      width: 90%;
       height: 7.5rem;
       cursor: pointer;
       color: black;
@@ -45,7 +45,7 @@
       span {
         display: flex;
         height: 60%;
-        overflow: hidden;
+        overflow: auto;
         text-overflow: clip;
       }
     }
@@ -54,7 +54,7 @@
   .info {
     width: 50%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     color: #888;
 

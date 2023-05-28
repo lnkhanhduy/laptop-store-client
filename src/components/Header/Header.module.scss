@@ -70,7 +70,7 @@
   display: none;
   width: 170%;
   position: absolute;
-  top: 5.2rem;
+  top: 4.8rem;
   left: 0;
   max-height: 30rem;
   font-size: 1.7rem;
@@ -304,7 +304,10 @@
 @media screen and (max-width: 960px) {
   .header-link {
     padding: 0.8rem 5%;
-    font-size: 1.7rem;
+    font-size: 1.6rem;
+  }
+  .user-login .login {
+    top: 3.6rem;
   }
 
   .logo {
@@ -325,6 +328,7 @@
 
     .search-form {
       height: var(--height-header-item-960);
+
       button {
         width: var(--height-header-item-960);
         height: var(--height-header-item-960);
@@ -363,6 +367,10 @@
     padding: 2.2rem 2.4rem;
   }
 
+  .user-login .login {
+    top: 3.6rem;
+  }
+
   .logo {
     padding: 0;
     position: absolute;
@@ -373,12 +381,21 @@
   .user {
     position: absolute;
     padding-right: 2rem;
+
+    .login {
+      width: 12.5rem;
+
+      a {
+        font-size: 1.5rem;
+        padding: 0.6rem 0.5rem;
+      }
+    }
   }
 
   .header::after {
     position: absolute;
     content: '';
-    top: 10.9rem;
+    top: 10.7rem;
     left: 0;
     background: #03484d;
     width: 100%;
@@ -386,16 +403,16 @@
   }
 
   .list-category {
-    top: 5.4rem;
+    top: 5.2rem;
     width: 18rem;
 
     a {
-      padding: 0.4rem;
+      padding: 0.6rem 0.5rem;
     }
   }
 
   .search {
-    top: 11.4rem;
+    top: 11.3rem;
     padding: 0;
     width: 60%;
     z-index: 1;
@@ -424,7 +441,7 @@
 
       span {
         margin-top: 0.2rem;
-        font-size: 1.5rem;
+        font-size: 1.4rem;
       }
     }
   }

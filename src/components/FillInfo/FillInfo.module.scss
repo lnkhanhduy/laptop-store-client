@@ -1,8 +1,31 @@
 .fill-info {
   padding-top: 2rem;
   margin: auto;
-  width: 80%;
+  width: 100%;
   font-size: 1.7rem;
+
+  .form-fill-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .form-group {
+      margin: 0.8rem 0;
+      width: 50%;
+      padding: 0 2rem;
+
+      input {
+        width: 100%;
+        display: block;
+        margin-top: 0.3rem;
+        padding: 1rem;
+        outline: none;
+        border: 0.1rem solid #ccc;
+        border-radius: 0.3rem;
+        font-size: 1.5rem;
+      }
+    }
+  }
 
   .button {
     display: flex;
@@ -28,34 +51,27 @@
     }
   }
 
-  .form-group {
-    margin: 0.8rem 0;
-
-    input,
-    .select {
-      width: 100%;
-      display: block;
-      margin-top: 0.3rem;
-      padding: 1rem;
-      outline: none;
-      border: 0.1rem solid #ccc;
-      border-radius: 0.3rem;
-      font-size: 1.5rem;
-    }
-  }
-
   .error {
     color: red;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .fill-info .form-fill-info .form-group {
+    padding: 0 1rem;
   }
 }
 
 @media screen and (max-width: 640px) {
   .fill-info {
     font-size: 1.5rem;
+    padding: 0;
 
-    .form-group input,
-    .form-group .select {
-      font-size: 1.3rem;
+    .form-group {
+      input,
+      .select {
+        font-size: 1.3rem;
+      }
     }
   }
 }
