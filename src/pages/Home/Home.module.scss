@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   width: 100%;
   margin: auto;
+
   .list-product {
     margin: 0 auto;
   }
@@ -17,9 +18,9 @@
 @media screen and (max-width: 640px) {
   .home {
     font-size: 1.5rem;
-  }
 
-  .list-product {
-    margin: 4rem auto;
+    .list-product {
+      margin: 4rem auto;
+    }
   }
 }
